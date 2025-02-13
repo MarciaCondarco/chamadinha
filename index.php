@@ -33,20 +33,21 @@ $resultado = $banco->query($select)->fetchAll();
                 Ações
             </td>
         </tr>
-        <!-- o foreach funciona somente no array, pegar o array e fazer um laço -->
+        <!-- o foreach funciona somente no array, pegar o array e fazer um laço, quando estiver rodando é como estivesse lendo cada linha da lista -->
         <!-- atribuição o sinal de igual e maior  =>  -->
-        <!-- as - atribui -->
-        <?php foreach ($resultado as $lista) { ?>
+        <!-- as - atribui, estou mandando para algum lugar -->
+
+        <?php foreach ($resultado as $linha) { ?>
             <tr class="text-center">
                 <td>
-                    <?php echo $lista['Id_alunos'] ?>
+                    <?php echo $linha['Id_alunos'] ?>
                 </td>
                 <td>
-                    <?= $lista['nome'] ?>
+                    <?= $linha['nome'] ?>
                     <!-- O atalho só funciona para o ECHO -->
                 </td>
                 <td>
-                    <a href="#" class="btn btn-primary">Abrir</a>
+                    <a href="./ficha.php?id_aluno=<?php echo $linha['Id_alunos'] ?>" class="btn btn-primary">Abrir</a>
                     <a href="#" class="btn btn-warning">Editar</a>
                     <a href="#" class="btn btn-danger">Excluir</a>
                 </td>
