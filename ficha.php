@@ -14,7 +14,6 @@ $select = 'SELECT * FROM tb_info_alunos WHERE id_alunos = ' . $id_aluno;
 // query é um script de consulta
 $dados = $banco->query($select)->fetch();
 
-var_dump($dados);
 
 ?>
 
@@ -40,17 +39,17 @@ var_dump($dados);
         <div class="row mt-2">
             <div class="col">
                 <label for="idade">Telefone</label>
-                <input type="number" value="19981256655" disabled class="form-control">
+                <input type="number" value="<?php echo $dados ['telefone']  ?>" disabled class="form-control">
             </div>
             <div class="col">
                 <label for="idade">Email</label>
-                <input type="number" value="marcia.gmcondarco@senacsp.edu.br" disabled class="form-control">
+                <input type="email" value="<?php echo $dados ['email'] ?>" disabled class="form-control">
             </div>
         </div>
         <div class="row mt-2">
             <div class="col">
                 <label for="data_nascimento">Data Nascimento</label>
-                <input type="date" value="2000-05-07" disabled class="form-control">
+                <input type="date" value="<?= $dados ['nascimento'] ?>" disabled class="form-control">
             </div>
             <div class="col my-4 pt-2">                
                 <input type="checkbox" class="form-check-input">
