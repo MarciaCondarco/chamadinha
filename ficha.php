@@ -9,7 +9,7 @@ $password = '';
 // PDO é a biblioteca é o caminho que faço
 $banco = new PDO($dsn, $user, $password);
 
-$select = 'SELECT * FROM tb_info_alunos WHERE id_alunos = ' . $id_aluno;
+$select = 'SELECT tb_info_alunos.*, tb_alunos.nome FROM tb_info_alunos INNER JOIN tb_alunos ON tb_alunos.Id_alunos = tb_info_alunos.id WHERE tb_info_alunos.id=' . $id_aluno;
 
 // query é um script de consulta
 $dados = $banco->query($select)->fetch();
@@ -32,10 +32,10 @@ $dados = $banco->query($select)->fetch();
     }
 </style>
 <main class="container text-center my-5">
-    <img src="./fotos/user.png" alt="foto usuario">
+    <img src="./img/<?php echo $dados ['img']  ?>" alt="foto usuario">
     <form action="#">
         <label for="idade">Nome</label>
-        <input type="text" value="Marcia Condarco" disabled class="form-control">
+        <input type="text" value="<?php echo $dados ['nome']  ?>" disabled class="form-control">
         <div class="row mt-2">
             <div class="col">
                 <label for="idade">Telefone</label>
