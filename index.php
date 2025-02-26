@@ -3,13 +3,13 @@
 
 <?php
 
-$dsn = 'mysql:dbname=db_chamadinha;host=127.0.0.1';
+$dsn = 'mysql:dbname=db_lanchesdamaju;host=127.0.0.1';
 $user = 'root';
 $password = '';
 
 $banco = new PDO($dsn, $user, $password);
 
-$select = 'SELECT * FROM tb_alunos';
+$select = 'SELECT * FROM tb_cliente';
 
 $resultado = $banco->query($select)->fetchAll();
 // fetchAll -> retorne todas as informações
