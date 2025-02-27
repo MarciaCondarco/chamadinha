@@ -22,6 +22,9 @@ $resultado = $banco->query($select)->fetchAll();
 ?>
 <main class="container my-5">
     <table class="table table-striped">
+        <div class="my-3 d-flex justify-content-end">
+            <a href="formulario.php" class="btn btn-success">Cadastrar Novo Aluno</a>
+        </div>
         <tr class="text-center">
             <td>
                 id
@@ -49,7 +52,8 @@ $resultado = $banco->query($select)->fetchAll();
                 <td>
                     <a href="./ficha.php?id_aluno=<?php echo $linha['Id_alunos'] ?>" class="btn btn-primary">Abrir</a>
                     <a href="#" class="btn btn-warning">Editar</a>
-                    <a href="#" class="btn btn-danger">Excluir</a>
+                    <a href="./aluno-deletar.php?id=<?php echo $linha['Id_alunos'] ?>" class="btn btn-danger">Excluir</a>
+                    <!-- da esquerda do ? é arquivo , da direita é variavel -->
                 </td>
             </tr>
         <?php } ?>
