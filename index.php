@@ -51,7 +51,7 @@ $resultado = $banco->query($select)->fetchAll();
                 </td>
                 <td>
                     <a href="./ficha.php?id_aluno=<?php echo $linha['Id_alunos'] ?>" class="btn btn-primary">Abrir</a>
-                    <a href="#" class="btn btn-warning">Editar</a>
+                    <a href="./formulario-editar.php?id_aluno_alterar=<?php echo $linha['Id_alunos'] ?>" class="btn btn-warning">Editar</a>
                     <a href="./aluno-deletar.php?id=<?php echo $linha['Id_alunos'] ?>" class="btn btn-danger">Excluir</a>
                     <!-- da esquerda do ? é arquivo , da direita é variavel -->
                 </td>
