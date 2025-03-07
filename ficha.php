@@ -3,7 +3,10 @@
 $id_aluno = $_GET['id_aluno'];
 
 $dsn = 'mysql:dbname=db_chamadinha;host=127.0.0.1';
+// dsn é a para localizar o banco de dados, mysql e nome do banco é a db_chamadinha, o localhost que é 127.0.0.1
+
 $user = 'root';
+
 $password = '';
 
 // PDO é a biblioteca é o caminho que faço

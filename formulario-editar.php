@@ -20,6 +20,8 @@
         $id_aluno_alterar = $_GET['id_aluno_alterar'];
 
         var_dump($id_aluno_alterar);
+        // var_dump aparece os registros
+        
         ?>
         <h1>Editar Cadastro</h1>
         <?php
@@ -28,6 +30,8 @@
         $id_aluno_alterar = $_GET['id_aluno_alterar'];
 
         $dsn = 'mysql:dbname=db_chamadinha;host=127.0.0.1';
+        // dsn é a para localizar o banco de dados, mysql e nome do banco é a db_chamadinha, o localhost que é 127.0.0.1
+
         $user = 'root';
         $password = '';
 

@@ -13,16 +13,25 @@
         <!-- metodo de envio -> GET: manda informações atraves da url E POST: manda informações atraves do corpo -->
         <!-- Action: ele é para onde deve enviar os dados -->
         <form action="./aluno-cadastrar.php" method="POST">
+            <!-- formulario com metodo POST para coletar as informações do conteúdo e direciona para a pagina aluno-cadastrar.php -->
             <input type="text" placeholder="nome" name="nome"><br>
+            <!-- campo que inseri o nome do tipo text -->
             <input type="number" placeholder="Telefone" name="telefone"><br>
+            <!-- campo que inseri o telefone com tipo number -->
             <input type="email" placeholder="Email" name="email"><br>
+            <!-- campo que inseri o email com tipo email -->
             <input type="date" placeholder="Nascimento" name="nascimento"><br>
+            <!-- campo que inseri a data de nascimento do tipo date -->
             <div>
                 <label>Frequente?</label>
+                <!-- label é o texto que aparece emcima do campo -->
                 <input type="checkbox" placeholder="Frequente" name="frequente"><br>
+                <!-- checkbox para selecionar se esta frequente ou não -->
             </div>
             <input type="file" accept="imagem/*" name="img"><br>
+            <!-- campo para selecionar imagem selecionada -->
             <input type="submit">
+            <!-- botão para enviar -->
         </form>
     </div>
 </section>,
