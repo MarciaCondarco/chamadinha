@@ -14,6 +14,7 @@
     }   
 </style>
 <section class="linha-formulario">
+    <!-- seção para iniciar o formulario dos alunos-->
     <div class="formulario" class="text-center">
         <h1>Formulario</h1>
         <!-- metodo de envio -> GET: manda informações atraves da url E POST: manda informações atraves do corpo -->
