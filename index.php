@@ -27,19 +27,23 @@ $resultado = $banco->query($select)->fetchAll();
 
 ?>
 <main class="container my-5">
-<!--  -->
+    <!-- o container tem o margem vertical com tamanho 5 -->
     <table class="table table-striped">
         <div class="my-3 d-flex justify-content-end">
             <a href="formulario.php" class="btn btn-success">Cadastrar Novo Aluno</a>
         </div>
         <tr class="text-center">
+            <!-- linha acima (tr)refere a linha da tabela  -->
             <td>
+            <!-- td é a coluna da linha -->
                 id
             </td>
             <td>
+            <!-- td é a coluna da linha -->
                 nome
             </td>
             <td>
+            <!-- td é a coluna da linha -->
                 Ações
             </td>
         </tr>
@@ -50,12 +54,15 @@ $resultado = $banco->query($select)->fetchAll();
         <?php foreach ($resultado as $linha) { ?>
             <!-- a linha acima esta lendo cada linha e colocando na variavel $linha -->
             <tr class="text-center">
+            <!-- tr a linha com o texto centralizado -->
                 <td>
+                <!-- uma coluna onde aparece os id de todos os alunos existente do banco -->
                     <?php echo $linha['Id_alunos'] ?>
                     <!-- linha acima parece o id do aluno  -->
                 </td>
                 <td>
                     <?= $linha['nome'] ?>
+                    <!-- uma coluna onde aparece os id de todos os alunos existente do banco -->
                     <!-- aparece o nome  -->
                     <!-- O atalho só funciona para o ECHO -->
                 </td>
@@ -66,7 +73,6 @@ $resultado = $banco->query($select)->fetchAll();
                     <!-- a linha acima é o botão de editar que direciona para pagina formulario-editar.php  -->
                     <a href="./aluno-deletar.php?id=<?php echo $linha['Id_alunos'] ?>" class="btn btn-danger">Excluir</a>
                     <!-- a linha acima, exclui o registro do aluno que direciona para pagina aluno-deletar.php, diante ao ID do aluno -->
-                     
                     <!-- da esquerda do ? é arquivo , da direita é variavel -->
                 </td>
             </tr>
