@@ -8,7 +8,7 @@
         flex-direction: column;
         /* define o elemento em direção de coluna */
         align-items: center;
-        /* centraliza os elementos */
+        /* centraliza na vertical os elementos */
         gap: 50px;
         /* espaçamento entre os elementos de 50px */
     }   

@@ -10,11 +10,17 @@ var_dump($_POST);
 
 
 $editarId = $_POST['id'];
+// definindo o id do banco para variavel $editarID
 $editarNome = $_POST['nome'];
+// definindo o nome do banco para variavel $editarNome
 $editarTelefone = $_POST['telefone'];
+// definindo o telefone do banco para variavel $editarTelefone
 $editarEmail = $_POST['email'];
+// definindo o email do banco para variavel $editarEmail
 $editarNascimento = $_POST['nascimento'];
+// definindo o nascimento do banco para variavel $editarNascimento
 $editarImg = $_POST['img'];
+// definindo o imagem do banco para variavel $editarImg
 
 $dsn = 'mysql:dbname=db_chamadinha;host=127.0.0.1';
 // dsn é a para localizar o banco de dados, mysql e nome do banco é a db_chamadinha, o localhost que é 127.0.0.1
@@ -41,7 +47,7 @@ $banco->prepare($update)->execute([
 // --------------------------------------
 $update = 'UPDATE tb_info_alunos set telefone = :telefone, email = :email, nascimento = :nascimento, img = :img where id_alunos = :id' ;
 // script para fazer uma atualização da tabela tb_info_alunos nas colunas da tabela que são: telefone,email,nascimento e imagem onde o id do aluno selecionado
- 
+
 $banco->prepare($update)->execute([
 // a variavel $banco prepara o script update, logo executar
 
