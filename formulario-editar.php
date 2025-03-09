@@ -54,7 +54,7 @@
         $password = '';
         // sem senha estabelecida
 
-        // PDO é a biblioteca é o caminho que faço
+        // PDO é a biblioteca é o caminho que faz do banco,usuario e senha
         $banco = new PDO($dsn, $user, $password);
 
         $select = 'SELECT tb_info_alunos.*, tb_alunos.nome FROM tb_info_alunos INNER JOIN tb_alunos ON tb_alunos.Id_alunos = tb_info_alunos.id WHERE tb_info_alunos.id=' . $id_aluno_alterar;
