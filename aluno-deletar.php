@@ -38,7 +38,7 @@ $box = $banco->prepare($delete);
 // variavel box que contém o $banco que prepara o script da variavel delete
 
 $box->execute([
-    // variavel box executa o 
+    // variavel box executa o id_alunos do banco
     ':id_alunos' => $idFormulario
 ]);
 
