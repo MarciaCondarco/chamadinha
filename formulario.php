@@ -1,10 +1,16 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- link do boostrap -->
 <style>
+    /* estilizando a class formulario */
     .formulario{
         display: flex;
+        /* define a posição do elemento com o resto */
         flex-direction: column;
+        /* define o elemento em direção de coluna */
         align-items: center;
+        /* centraliza os elementos */
         gap: 50px;
+        /* espaçamento entre os elementos de 50px */
     }   
 </style>
 <section class="linha-formulario">
